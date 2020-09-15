@@ -5,6 +5,13 @@ namespace App\Controllers;
 abstract class Controller {
 
     public $layout = 'main';
+    public $db;
+
+    public function __construct()
+    {
+        global $db;
+        $this->db = $db;
+    }
 
     public function render($template, $data = [])
     {

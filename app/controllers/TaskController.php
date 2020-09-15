@@ -1,8 +1,15 @@
 <?php
 namespace App\Controllers;
 
-class SiteController extends \App\Controllers\Controller
+class TaskController extends \App\Controllers\Controller
 {
+    /**
+     * CRUD
+     * - Create
+     * - Read
+     * - Update
+     * - Delete
+     */
     public function index()
     {
         $tasks = $this->db->query("SELECT * FROM tasks");

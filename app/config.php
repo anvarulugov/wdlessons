@@ -1,4 +1,5 @@
 <?php
+global $configs, $db;
 
 if (defined('DEBUG') && DEBUG === true) {
     ini_set('display_errors', 1);
@@ -6,3 +7,9 @@ if (defined('DEBUG') && DEBUG === true) {
     error_reporting(E_ALL);
 }
 
+$configs = [
+    'db_name' => 'darslar',
+    'db_host' => 'localhost',
+    'db_user' => 'anvar',
+    'db_pass' => 'anvar',
+];

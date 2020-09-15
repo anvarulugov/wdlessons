@@ -21,4 +21,17 @@ composer install
 
 # Qo'shimcha
 - DRY - Do not repeat yourself
-- 
+
+# Database - PDO
+- SELECT - ma'lumotlar bazasidan kerakli ma'lumotlarni olish
+- INSERT - ma'lumotlar bazasiga yangi ma'lumotlarni kiritish
+- UPDATE - ma'lumotlar bazasidagi mavjud ma'lumotlarni tahrirlash
+- DELETE - ma'lumotlar bazasidan belgilangan ma'lumotlarni o'chirish
+- Structure:
+-- tasks:
+--- id (integer)
+--- assined (integer) user_id
+--- task (text)
+--- status (bool|tinyint) 0: todo, 1: in progress, 2: finished
+--- date (datetime) crated date 0000-00-00 00-00-00
+--- deadline (datetime) expire date 0000-00-00 00-00-00

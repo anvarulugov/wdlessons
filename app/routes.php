@@ -1,8 +1,12 @@
 <?php
-use Pecee\SimpleRouter\SimpleRouter as Router;
+use Pecee\SimpleRouter\SimpleRouter as Route;
 
-Router::setDefaultNamespace('\App\Controllers');
+Route::setDefaultNamespace('\App\Controllers');
 
-Router::get('/', 'SiteController@index');
+Route::get('/', 'SiteController@index')->name('index');
 
-Router::start();
+Route::group(['prefix' => 'task'], function() {
+    Route::get('/', 'TaskController@index')->name('taskIndex');
+});
+
+Route::start();
